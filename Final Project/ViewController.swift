@@ -189,6 +189,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepare")
         print(self.clickIndex)
